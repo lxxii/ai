@@ -1,0 +1,204 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2015-05-25, 07:16:50
+    Author     : smeku
+*/
+
+.myico {
+    width: 32px;
+    height: 32px;
+    position:relative;
+}
+
+.myico:before {
+    position:absolute;
+    font-family: FontAwesome;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 200;
+    top:0;
+    bottom: 0;
+    left:0;
+    right: 0;
+    line-height: 32px;
+    text-align: center;
+    background: #FF1919;
+    border-radius: 4px;
+    color: #fff;
+}
+   
+.myico.ico-heading:before {
+    content: "\f1dc";
+     font-weight: bold;
+}
+
+.myico.ico-heading-box:before {
+    content: "\f1dc";
+}
+
+.myico.ico-button:before {
+    content: "\f0c1";
+}
+
+.myico.ico-fatures:before {
+    content: "\f0ca";
+}
+
+.myico.ico-achivement:before {
+    content: "\f162";
+}
+
+.myico.ico-progressbar:before {
+    content: "\f080";
+}
+
+.myico.ico-timeline:before {
+    content: "\f1da";
+}
+
+.myico.ico-testimonial:before {
+    content: "\f086";
+}
+
+.myico.ico-socialicons:before {
+    content: "\f1e0";
+}
+
+.myico.ico-imagefullscreen:before {
+    content: "\f03e";
+}
+
+.myico.ico-videofullscreen:before {
+    content: "\f03d";
+}
+.myico.ico-textrotate:before {
+    content: "\f074";
+}
+.myico.ico-portfolio:before {
+    content: "\f03e";
+}
+
+span.text-muted {
+    color:#ddd; 
+    padding: 0 7px;
+    
+    
+}
+
+.text-bold {
+   font-weight: 600; 
+}
+
+
+.wpb_heading .title {
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 20px;
+    border-right: 4px solid red;
+    padding: 15px 20px 30px 0;
+    color: red;
+    text-transform: uppercase;
+    
+}
+.wpb_heading .subtitle {
+    //color: #DDD;
+    font-size: 14px;
+    display: inline;
+    margin-top: 40px; 
+    color: #000;
+    letter-spacing: 1.5px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.wpb_heading_box .content {
+    text-transform: uppercase; 
+    letter-spacing: .5px;
+    display: block;
+    font-weight: 600;
+    font-size: 18px;
+    padding-top: 2px;
+    color: #000;
+}
+.wpb_heading_box .color { 
+    //letter-spacing: 1px;
+    display: inline-block;
+    font-weight: 300;
+    padding-left: 40px;
+    font-size: 12px;
+    //padding: 15px 20px 15px 0;
+    color: #ddd;
+    //text-transform: uppercase; 
+}
+.wpb_features .title {
+    padding-top:10px;
+    font-size: 16px;
+}
+
+.wpb_progress_bar .name {
+    position: relative;
+text-transform: uppercase; 
+font-weight: 400;
+font-size: 12px;
+margin-top: 10px;
+padding-right: 30px;
+letter-spacing: 1px;
+color: #666;
+}
+.wpb_progress_bar .name::after {
+content: " - ";
+position: absolute;
+right: 15px;
+z-index: 9;
+color: #666;
+}
+.wpb_progress_bar .percent {
+    color: red;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+
+.wpb_achivement .ico{ 
+   color:#ddd;   
+}
+.wpb_achivement .content{
+ text-transform: uppercase; 
+ text-align: center;
+font-weight: 300;
+font-size: 14px;
+padding-top: 15px; 
+}
+
+.wpb_achivement .count{
+ padding: 15px 0; 
+ text-align: center;
+font-weight: 300;
+font-size: 18px;   
+}
+
+.wpb_timeline .date2 {
+    margin-left: 10px;
+    color: #ddd;
+}
+.wpb_timeline .title {
+    text-transform: uppercase; 
+    font-weight: 400;
+    font-size: 16px;
+    padding: 10px;
+    color: #000;
+}
+
+.wpb_imagefullscreen .urlimg {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+top: 50px;
+padding: 4px;
+}
+
