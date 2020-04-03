@@ -1,0 +1,22 @@
+#!/bin/bash
+dir_css="../../css"
+
+lessc theme-blue.less  "$dir_css/theme-blue.css"
+
+lessc theme-red.less  "$dir_css/theme-red.css"
+
+lessc theme-orange.less  "$dir_css/theme-orange.css"
+
+lessc theme-yellow.less  "$dir_css/theme-yellow.css"
+
+lessc theme-green.less  "$dir_css/theme-green.css"
+
+lessc theme-purple.less  "$dir_css/theme-purple.css"
+
+lessc theme-navy.less  "$dir_css/theme-navy.css"
+
+lessc theme-gray.less  "$dir_css/theme-gray.css"
+
+lessc theme-dark.less  "$dir_css/theme-dark.css"
+
+lessc theme-black.less  "$dir_css/theme-black.css"

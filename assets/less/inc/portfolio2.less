@@ -1,0 +1,269 @@
+// 
+//
+//    Name       : PORTFOLIO
+//
+//    Created on : 2015-05-22, 03:37:40
+//    Author     : smeku
+//
+
+/*
+ *   PORTFOLIO FILTER
+*/
+/*  Portfolio filter Navigation  */
+.portfolio-filter-nav {
+    text-align: right;
+    padding: 6px;
+    padding-bottom: 10px;
+    margin-top: 0px;
+    position: relative;
+    z-index: 1;
+    display:block;
+
+    @media (min-width: @screen-md-min) {
+        & > a { display: none; }
+        .collapse { display: block; }
+    }   
+    
+
+    .btn-link {
+        font-weight: 300;
+        text-transform: uppercase; 
+        padding: 4px 8px;
+        //&:hover { color:  @color-default; background: none; }
+        &.active {background:  @color-default; color:#fff;  box-shadow: none;}
+    }
+
+}
+
+
+/*
+ *   PORTFOLIO / GRID COLUM
+*/
+.portfolio-colum {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        
+        figure {
+            position: relative;
+            padding:6px;
+            
+            a{
+                position: relative;
+                display: block;
+                overflow: hidden;
+                color:#fff;
+                cursor:crosshair;
+                cursor: url("../img/cursor.png") 40 40, crosshair;
+
+                img{
+                    position: relative;
+                    display:block;
+                    width: 100%;
+                }
+                
+                div {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background:rgba(0,0,0,.7);
+                    text-align:center;
+
+                    .name{
+                        letter-spacing: none;
+                        display: block;
+                        padding: 20px 20px;
+                        margin: 0;
+                        text-align:left;
+                        font-weight: 300;
+                        color: rgba(255,255,255, 1);
+                    }
+                    small {
+                        display: block;
+                        font-size: 12px;
+                        margin-bottom: 0;
+                        padding: 10px;
+                        text-transform: none;
+                        bottom:0;
+                        left:10px;
+                        position:absolute;
+                        color: rgba(255,255,255, .1);
+                    }
+                    i {
+                        font-size: 20px;
+                        bottom:0;
+                        padding: 10px;
+                        right:5px;
+                        position:absolute;
+                    }
+                }
+
+            }
+        }
+        
+        &.portfolio-colum-v2 {
+            padding: 0;
+            margin-bottom: 0;
+
+            figure {
+                padding:0px;   
+                a {
+                    img{
+                        width: auto;
+                    }
+                }
+            }    
+        }
+        
+        &.effect-scale {
+            figure {            
+                a {
+                    img {
+                        .transform(scale(1));
+                        .transition(all 1s);
+
+                    }
+
+                    &:hover img {
+                        .transform(scale(1.2));
+                        .transition(all 5s);
+                        -webkit-transition-delay: .5s; /* Safari */
+                        transition-delay: .5s;
+                    }
+                }   
+            }  
+        }
+
+    }
+
+
+    
+/*  Portfolio Loadmore  */ 
+.portfolio-loadmore {
+    display:block;
+    padding: 6px;
+}  
+
+  
+/*  Portfolio sharing-btns */ 
+.sharing-btns {
+    margin: 20px 0;
+    margin-right: -25px;
+    .share {
+        font-size: 12px;
+        line-height: 18px;
+        padding-right: 7px;
+        float: left;       
+    }   
+
+}    
+    
+/*
+ *   PORTFOLIO / SINGLE V2
+*/
+.portfolio-single-v2 {
+    
+    .myrow {
+        position: absolute;
+        top:0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+        
+        .mycol {
+            position: relative;
+            top:0;
+            bottom: 0;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            height: 100%;
+
+            &::-webkit-scrollbar-track {
+                background-color: @color-gray-light;
+            }
+            &::-webkit-scrollbar {
+                width: 6px;
+                background-color: #F5F5F5;
+            }
+            &::-webkit-scrollbar-thumb {
+                background-color: @color-default;
+            }
+            
+        }
+
+        .col-info {
+            padding: 0px 30px;
+            height: 100%;
+            overflow-y: auto;
+
+            &.open {
+                width: 100%;
+                height: 100%;
+            }
+
+            .page-header {
+                margin-top: 50px;
+            }
+            
+            p { letter-spacing: 1px; }
+            
+            a.url { font-family: @font-default; }
+        }
+          
+    }
+    
+    .box-ster {
+        position: fixed; 
+        z-index: 2;
+        bottom: 0;
+        right:0; 
+        padding:0;
+        padding-right: 7px;
+        text-align: right;
+        display:inline;
+        .btn {
+            margin: 0px -1px;
+            padding: 8px 18px;
+            
+            //i.fa { //font-size: 15px; }
+        }
+    }                        
+
+    .button-close,
+    .button-info {
+        display: none;
+    }
+    
+    @media (max-width: 786px) {
+
+        .col-info.open .button-close,
+        .button-info {
+            position: fixed;
+            top: 0px;
+            right: 0px;
+            z-index: 1;
+            margin: 0;
+            margin-right: 10px;
+            display: block;
+        }
+        
+        .myrow .col-info {
+            width: 0px;
+            height: 0px;
+            position: absolute;
+            top:-2px;
+            right: 0;
+            z-index: 1;
+            background: #fff;
+            -webkit-transition: width 1s, height 1s;
+            transition: width 1s, height 1s;
+        }
+
+    }
+    
+}
+   
+

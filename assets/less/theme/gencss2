@@ -1,0 +1,6 @@
+#!/bin/bash
+dir_css="../../css"
+
+
+lessc theme-red.less  "$dir_css/theme-red.css"
+

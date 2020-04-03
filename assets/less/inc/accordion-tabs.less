@@ -1,0 +1,43 @@
+// 
+//
+//    Name       : ACCORDION & TABS
+// 
+//   Created on  : 2015-08-27
+//   Updated on  : 2015-08-27
+//   Author      : smeku
+//
+//
+
+
+/*  Accordion  */
+.ui-accordion {
+    
+    .ui-accordion-header {
+        margin-bottom: 3px !important; 
+        border: 0px solid #f7f7f7; 
+        outline: none !important;
+        
+        &.ui-accordion-header-active { 
+            background: @color-default !important;  
+            a { 
+                color: #FFF; 
+                font-weight: 400; 
+                letter-spacing: 1px; 
+            }
+        }
+        
+        &:hover .ui-accordion-header-icon {color: #FF1919;}
+        
+        a { font-weight: 400;letter-spacing: 1px; }
+        
+    }
+    
+}
+
+/*  Tabs  */
+.ui-tabs {
+    .ui-tabs-panel {
+        background: none !important; 
+        border: 1px solid @color-gray-light; 
+    }
+}

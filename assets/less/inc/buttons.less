@@ -1,0 +1,246 @@
+// 
+//
+//    Name       : BUTTONS
+// 
+//   Created on  : 2015-05-27
+//   Updated on  : 2015-05-29
+//   Author      : smeku
+//
+//
+.btn {
+    border: 1px solid @color-gray-light;
+    //.transition(all .8s ease 0s);
+    border-radius: 0;
+    padding: 10px 30px;
+    cursor: pointer;
+    font-family: @font-default;
+    text-transform: uppercase;
+    font-weight: 400;
+    text-decoration: none;
+    letter-spacing: 2.5px;
+    font-size: 12px;
+    background: #fff;
+    
+    &:hover {text-decoration: none;}
+       
+
+    /* btn-default */
+    &.btn-default,
+    &.btn-primary,
+    &.btn-danger {
+        color: @color-base;
+        vertical-align: middle;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -moz-osx-font-smoothing: grayscale;
+        position: relative;
+        background: none;
+        -webkit-transition-property: color;
+        transition-property: color;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+
+        &:before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: @color-default;
+            -webkit-transform: scale(0);
+            transform: scale(0);
+            -webkit-transition-property: transform;
+            transition-property: transform;
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+            -webkit-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+        }
+
+        &:hover, &:focus, &:active {
+            color: white;
+            text-decoration: none;
+            border-color: @color-gray-light;
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+            background: none;
+        }
+        &:hover:before, &:focus:before, &:active:before {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+
+    }
+ 
+
+    &.btn-primary {
+        background: @color-default;
+        border: 1px solid @color-gray-light;
+        color: #fff;
+        
+        &:before {
+            background: @color-gray-light;
+        }
+        
+        &:hover, &:focus, &:active {
+            color: @color-default;
+            text-decoration: none;
+            border-color: @color-gray-light;
+        }
+    }
+    
+    &.btn-danger {
+        border: 2px solid @color-red; 
+        //color: @color-red;
+        
+        &:hover, &:focus, &:active {
+            color: #fff;
+            text-decoration: none;
+            border-color: @color-red;
+        }
+    }
+    
+    
+
+    /* btn-link */
+    &.btn-link {
+        background: none;
+        border: 0;
+        text-transform: capitalize;
+        color: @color-gray;
+        line-height: 1.4;
+        // display: inline-block;
+        vertical-align: middle;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -moz-osx-font-smoothing: grayscale;
+        position: relative;
+        background: none;
+        -webkit-transition-property: color;
+        transition-property: color;
+        -webkit-transition-duration: 0.1s;
+        transition-duration: 0.1s;
+
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: @color-default;
+            color: #fff;
+            -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+            -webkit-transform-origin: 50%;
+            transform-origin: 50%;
+            -webkit-transition-property: transform;
+            transition-property: transform;
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+            -webkit-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+        }
+        &.active,&:hover, &:focus, &:active {
+            color: #fff;
+            text-decoration: none;
+            -webkit-transition-duration: 0s;
+            transition-duration: 0s;
+        }
+        &:hover:before, &:focus:before, &:active:before {
+            -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+            color: #fff;
+        }
+
+
+    } 
+
+
+    
+    &.btn-success {
+        border-color: @color-green;
+    }
+    
+    &.btn-info {
+        border-color: @color-blue;
+    }
+    
+    &.btn-warning {
+        border-color: #8a6d3b;
+    }  
+    
+    
+    //&:hover,
+   // &.btn-link:hover,
+    //&.btn-link.active:hover,
+    &.btn-success:hover,
+    &.btn-info:hover,
+    &.btn-warning:hover {
+        background: @color-default;
+        border-color: @color-default;
+        color:#fff;
+        text-decoration: none;
+    }
+         
+    
+    &.btn-lg {
+        padding: 15px 35px;
+    }
+    &.btn-sm {
+        padding: 8px 25px;
+         letter-spacing: 1px;
+    }
+    &.btn-xs {
+        padding: 4px 15px;
+        letter-spacing: 0.5px;
+    }
+    
+    &.btn-load-to-disabled {
+        pointer-events: none;
+        cursor: not-allowed;
+    }
+    
+    
+    .ico-left {
+        margin-right: 8px;
+        margin-left: -4px;
+        padding-right:5px; 
+        line-height: 100%;
+    }
+    .ico-right {
+        margin-left: 8px;
+        margin-right: -4px;
+        padding-left:5px; 
+        line-height: 100%;
+    }
+    
+    &.btn-ico {
+        padding:10px 15px;
+        
+        
+        &.btn-lg {
+            padding: 15px 22px;
+        }
+        &.btn-sm {
+            padding: 8px 16px;
+            letter-spacing: 1px;
+        }
+        &.btn-xs {
+            padding: 4px 8px;
+            font-size: 11px;
+            letter-spacing: 0.5px;
+        }
+        
+    }
+       
+}

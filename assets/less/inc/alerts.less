@@ -1,0 +1,39 @@
+/* 
+    Created on : 2015-04-27, 21:12:05
+    Author     : smeku
+*/
+
+/* =================================================================== */
+/*   ALERT
+/* =================================================================== */
+.alert {
+    border-radius: 0;
+    background: @color-gray2;
+    font-weight: 400;
+    letter-spacing: 1px;
+    border: 1px solid @color-gray-light;
+    border-left: 5px solid @color-gray-light;
+    .transition(all .8s);
+    
+    &.alert-success {
+        color: @color-green;
+        border-left-color: @color-green;
+    }
+    &.alert-info {
+        color: @color-blue;
+        border-left-color: @color-blue;
+    }
+    &.alert-warning {
+        color: #8a6d3b;
+        border-left-color: #8a6d3b;
+    }
+    &.alert-danger {
+        color: @color-red;
+        border-left-color: @color-red;
+    } 
+    
+    &.alert-dismissible .close{ 
+       color: @color-gray;
+    }
+    
+}

@@ -1,0 +1,151 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2015-05-14, 10:37:37
+    Author     : smeku
+*/
+form {
+    display:block;
+    margin:1em 0;
+    padding:0;
+    
+    .form-group {
+        position: relative;
+    }
+    
+    .input-group-btn > .btn {
+        margin: 0;
+        height: 46px;
+    }
+    
+    input,
+    textarea {
+        display: block;
+        background: rgba(255,255,255, .9);
+        border: 1px solid @color-gray-light;
+        letter-spacing: 1px;
+        border-radius: 0;  
+        margin:0px;
+        padding: 6px 12px;
+        color: @color-base;
+        height:46px;
+        width: 100%;
+        .box-shadow(none);
+        .transition(all 0.4s);
+    }
+    
+    input[type="submit"] {
+        display: inline-block;
+        width: auto;
+    }
+    
+    textarea {
+        min-height:60px;
+    }
+    
+    .form-icon { 
+        position: absolute; 
+        top: 15px; 
+        right: 15px; 
+        color: @gray-lighter;
+    }
+    
+    input:focus,
+    textarea:focus {
+        background:@color-gray-light;
+        border-color:#fff;
+        .box-shadow(none);
+        outline: none;
+    }
+
+    input:focus + .form-icon,
+    textarea:focus + .form-icon { 
+        color: @color-default;
+    }
+
+
+    @media (min-width: 992px) {
+
+        input,
+        textarea {
+            height:46px;
+            font-size:12px;
+        }
+        textarea {
+            height:100px;
+        }  
+    }
+
+    *::-moz-placeholder {
+        color: @gray;
+        font-weight: 300;
+        letter-spacing: 1px;
+        //font-size: 12px;
+    }
+    *::-ms-input-placeholder {
+        color: @gray;
+        letter-spacing: 1px;
+        font-weight: 300;
+    }
+    *::-webkit-input-placeholder {
+        color: @gray;
+        letter-spacing: 1px;
+        font-weight: 300;
+    }
+
+}
+
+
+.wpcf7-form {
+    input {
+        &[type="submit"] {
+            background: transparent;
+            color: @color-gray;
+            border: 1px solid @color-gray-light;
+            .transition(all .8s ease 0s);
+            border-radius: 0;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-family: @font-heading;
+            text-transform: uppercase;
+            font-weight: 300;
+            text-decoration: none;
+            letter-spacing: 1.5px;
+        }
+        &:hover[type="submit"] {
+            background: @color-default;
+            border-color: transparent;
+            color:#fff;
+        }
+
+    }  
+    .wpcf7-response-output {
+        margin: 0;
+        margin-bottom: 20px;
+        padding: 15px;
+        border-radius: 0;
+        background: #fff;
+        letter-spacing: .5px;
+        border: 1px solid @color-gray-light;
+        border-left: 5px solid @color-gray-light;
+    }
+    .wpcf7-validation-errors {
+        color: @color-red;
+        border-left-color: @color-red;
+    }
+    .wpcf7-mail-sent-ok {
+        border: 2px solid #398f14;
+    }
+
+    .wpcf7-mail-sent-ng {
+        color: @color-red;
+        border-left-color: @color-red;
+    }
+
+
+}
+
+

@@ -1,0 +1,100 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2015-05-14, 03:48:08
+    Author     : smeku
+*/
+
+
+.sidebar {
+    display: none;
+    position:fixed;
+    z-index: 9999;
+    top:0;
+    bottom: 0;
+    width: 100%;
+    left: -300px;
+    max-height: 100%;
+    overflow-x: none;
+    .transition(left .5s);
+    border:0;
+    border: 1px solid @color-gray-light;
+    
+    &.sidebar-show {
+        left: 0;        
+    }
+    
+    .page-header {color: @color-black;}
+
+    &.sidebar-white {
+        background: @color-white; 
+    }
+    &.sidebar-graylight {
+        background: @color-gray-light;       
+    }
+    &.sidebar-gray {
+        background: @color-gray;       
+    }
+    &.sidebar-dark {
+        background: @color-dark;
+        border-color: @color-dark;
+    }
+    &.sidebar-black {
+        background: @color-black; 
+        border-color: @color-black;
+    }
+    &.sidebar-gray,
+    &.sidebar-dark,
+    &.sidebar-black {
+        //p {color: #fff;}
+        a {
+            color: @color-gray-light;
+            &:hover {color: @color-default;}
+        }
+        .page-header {color: #fff;}
+    }
+
+
+    @media (min-width: @screen-md-min) { 
+
+        &{ 
+            display: inline-block;
+            width: @nav-left-width-md;
+        }
+    }
+    @media (min-width: @screen-lg-min) {
+
+        &{ 
+            width: @nav-left-width-lg; 
+        } 
+    }
+
+
+    .close-button {
+        z-index: 999991;
+        position: absolute;
+        top:0;
+        left: 0;
+        display: inline-block;
+        
+        .btn.sidebar-btn {
+                    //color:@color-default;
+                    border:0;
+                    &:hover {
+                        background: none;
+                    }
+                }
+        
+    }
+    
+    .sidebar-content {
+        max-height: 100%;
+        overflow-x: auto;
+        padding: 30px 10px;
+    }
+
+
+}

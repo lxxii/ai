@@ -1,0 +1,221 @@
+// 
+//
+//    Name       : PROGRESS-BAR
+//
+//    Created on : 2015-06-01, 16:26:33
+//    Author     : smeku
+//
+
+.progress_bar.pb_styl1 {
+
+    ul {
+        margin-top: 30px;  
+        &:hover {
+            li .progress .progress-percent{
+                background: @color-default;
+                border-color: @color-default;
+                color: #fff;
+                &:after, &:before {
+                    border-top-color: @color-default;
+                }
+            }
+        }
+
+        li {
+            position: relative;
+            margin-top: 30px;
+            height: 23px;
+            background: #fff;
+            border: 1px solid @color-gray-light;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            border-radius: 2px;
+            
+            &:first-child { margin-top: 0; }
+
+            .progress {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                -webkit-border-radius: 2px;
+                -moz-border-radius: 2px;
+                border-radius: 2px;
+                overflow: visible !important;
+                //background: #444;
+            }
+            
+            .progress.countTo .progress-percent {
+                display: block;
+            }
+
+            .progress-percent {
+                display: none;
+                position: absolute;
+                top: -28px;
+                right: 0;
+                background: @color-gray-lighter;
+                border: 1px solid #fff;
+                color: #333;
+                height: 22px;
+                line-height: 22px;
+                padding: 0px 5px;
+                font-size: 12px;
+                font-weight: 400;
+                -webkit-border-radius: 2px;
+                -moz-border-radius: 2px;
+                border-radius: 2px;
+                .transition(all .2s ease);
+                background: @color-gray-light;
+
+                
+                &:after, &:before {
+                    top: 100%;
+                    border: solid transparent;
+                    content: " ";
+                    height: 0;
+                    width: 0;
+                    position: absolute;
+                    pointer-events: none;
+                    .transition(all .2s ease);
+                }
+
+                &:after {
+                    border-top-color: @color-gray-light;
+                    border-width: 4px;
+                    left: 50%;
+                    margin-left: -4px
+                }
+                
+                &:before {
+                    border-top-color: @color-gray-light;
+                    border-width: 5px;
+                    left: 50%;
+                    margin-left: -5px
+                }
+            }
+
+            &>span {
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding-left: 8px;
+                height: 21px;
+                line-height: 21px;
+                font-size: 11px;
+                font-weight: 400;
+                letter-spacing: 1.5px;
+                color: #FFF;
+                text-shadow: none;
+            }
+        }
+    }
+
+}
+
+
+.progress_bar.pb_styl2 {
+
+    ul {
+        margin-top: 30px;
+
+        li {
+            position: relative;
+            margin-top: 45px;
+            height: 5px;
+            background-color: @color-gray-light;
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+          
+
+            &:first-child {
+                margin-top: 45px;
+            }
+
+            &>span {
+                position: absolute;
+                z-index: 1;
+                top: -23px;
+                left: 0;
+                line-height: 20px;
+                font-size: 12px;
+                font-weight: 300;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                color: #222
+            }
+
+            .progress {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 0;
+                height: 100%;
+                overflow: visible !important;
+                border-radius: 0px;
+            }
+            
+            &:hover {
+                .progress-percent{
+                    background: @color-default;
+                    border-color: @color-default;
+                    color: #fff;
+                    &:after, &:before {
+                        border-top-color: @color-default;
+                    }
+                }
+            }
+            
+            .progress-percent {
+                position: absolute;
+                top: -28px;
+                right: 0;
+                background: #ddd;
+                border: 1px solid #fff;
+                color: #444;
+                height: 22px;
+                line-height: 22px;
+                padding: 0 5px;
+                font-size: 12px;
+                border-radius: 2px;
+                
+                &:after, &:before {
+                    top: 100%;
+                    border: solid transparent;
+                    content: " ";
+                    height: 0;
+                    width: 0;
+                    position: absolute;
+                    pointer-events: none
+                }
+
+                &:after {
+                    border-top-color: #ddd;
+                    border-width: 4px;
+                    left: 50%;
+                    margin-left: -4px
+                }
+                
+                &:before {
+                    border-top-color: #ddd;
+                    border-width: 5px;
+                    left: 50%;
+                    margin-left: -5px
+                }
+                
+                
+
+                .counter {
+                    font-weight: 300;
+                }
+
+            }
+
+            
+        }  
+    }
+    
+   
+
+
+}
+
